@@ -94,8 +94,9 @@
 					<artifactId>jmxri</artifactId>
 				</exclusion>
 			</exclusions>
-			<scope>runtime</scope>
+
 		</dependency>
+		<!-- <scope>runtime</scope> -->
 
 		<!-- @Inject -->
 		<dependency>
@@ -127,9 +128,9 @@
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
-			<version>4.7</version>
+			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>        
+		</dependency>
 	</dependencies>
 
 	<!-- java config 를 위해 pom.xml에 web.xml 없다고 알림 -->
