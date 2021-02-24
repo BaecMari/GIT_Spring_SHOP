@@ -131,6 +131,11 @@
 			<scope>test</scope>
 		</dependency>        
 	</dependencies>
+
+	<!-- java config 를 위해 pom.xml에 web.xml 없다고 알림 -->
+	<!-- <groupId>org.apache.maven.plugins</groupId> -->
+	<!-- 맨 아래 기술 -->
+
     <build>
         <plugins>
             <plugin>
@@ -167,6 +172,15 @@
                     <mainClass>org.test.int1.Main</mainClass>
                 </configuration>
             </plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.0</version>
+				<configuration>
+					<failOnMissingWebXml>false</failOnMissingWebXml>
+				</configuration>
+			</plugin>
+
         </plugins>
     </build>
 </project>
