@@ -9,7 +9,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
 @EnableWebMvc
-@ComponentScan(basePackages = {"com.shop.controller"})
+@ComponentScan(basePackages = {"com.shop.controller","com.shop.exception"})
 public class ServletConfig implements WebMvcConfigurer {
 
     @Override
