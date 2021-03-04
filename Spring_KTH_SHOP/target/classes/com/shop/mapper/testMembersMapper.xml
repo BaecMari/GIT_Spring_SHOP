@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!-- <mapper namespace="com.shop.mapper.testMembersMapper"> -->
+<mapper namespace="com.shop.mapper.testMembersMapper">
+
+    <resultMap id="MembersList" type="com.shop.domain.SampleMembersVO" >
+        <result property="userid" column="userid" />
+        <result property="passwd" column="passwd" />
+        <!-- mysql에서 TEXT 컬럼을 읽어오기 위해서 VARCHAR로 변환 -->
+        <result property="name" column="name" jdbcType="VARCHAR" javaType="java.lang.String" />
+        <result property="birthdate" column="birthdate" />
+        <result property="cellphone" column="cellphone" />
+        <result property="gender" column="gender" />
+        <result property="address" column="address" jdbcType="VARCHAR" javaType="java.lang.String" />
+    </resultMap>
+
+    <!--<select id="getList" resultType="com.shop.domain.SampleMembersVO"> -->
+    <select id="getList" resultMap="MembersList">
+        <![CDATA[
+            select * from USER_MEMBERS
+        ]]>
+    </select>
+</mapper>
