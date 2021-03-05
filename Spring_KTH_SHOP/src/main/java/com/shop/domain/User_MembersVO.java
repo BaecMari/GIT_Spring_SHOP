@@ -3,7 +3,7 @@ package com.shop.domain;
 import lombok.Data;
 
 @Data
-public class SampleMembersVO {
+public class User_MembersVO {
 
     //User_Members
 
@@ -11,7 +11,7 @@ public class SampleMembersVO {
     private String passwd;
     private String name;
     private int birthdate;
-    private int cellphone;
+    private String cellphone; //수정 : 2021.03.05 (010으로 넣으면 8진수 인식 값 오류 발생)
     private int gender;
     private String address;
 }

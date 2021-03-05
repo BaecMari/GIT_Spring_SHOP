@@ -1,6 +1,6 @@
 package com.shop.service;
 
-import com.shop.domain.SampleMembersVO;
+import com.shop.domain.User_MembersVO;
 import com.shop.mapper.testMembersMapper;
 import lombok.AllArgsConstructor;
 import lombok.Setter;
@@ -22,8 +22,15 @@ public class testMembersServiceImpl implements testMembersService{
     private testMembersMapper mapper;
 
     @Override
-    public List<SampleMembersVO> getList() {
+    public List<User_MembersVO> getList() {
         log.info("getList()..........");
         return mapper.getList();
+    }
+
+    @Override
+    public void register(User_MembersVO user_membersVO) {
+        log.info("register............" + user_membersVO);
+
+        mapper.insert(user_membersVO);
     }
 }

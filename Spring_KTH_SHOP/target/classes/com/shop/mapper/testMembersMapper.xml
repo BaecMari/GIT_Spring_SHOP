@@ -5,7 +5,7 @@
 <!-- <mapper namespace="com.shop.mapper.testMembersMapper"> -->
 <mapper namespace="com.shop.mapper.testMembersMapper">
 
-    <resultMap id="MembersList" type="com.shop.domain.SampleMembersVO" >
+    <resultMap id="MembersList" type="com.shop.domain.User_MembersVO" >
         <result property="userid" column="userid" />
         <result property="passwd" column="passwd" />
         <!-- mysql에서 TEXT 컬럼을 읽어오기 위해서 VARCHAR로 변환 -->
@@ -16,10 +16,20 @@
         <result property="address" column="address" jdbcType="VARCHAR" javaType="java.lang.String" />
     </resultMap>
 
-    <!--<select id="getList" resultType="com.shop.domain.SampleMembersVO"> -->
+    <!--<select id="getList" resultType="com.shop.domain.User_MembersVO"> -->
+
+    <!-- User_Members 테이블 조회 -->
+    <!-- select -->
     <select id="getList" resultMap="MembersList">
         <![CDATA[
             select * from USER_MEMBERS
         ]]>
     </select>
+
+    <!-- User_Members 테이블 회원가입 -->
+    <!-- Insert -->
+    <insert id="insert">
+        insert into USER_MEMBERS (userid, passwd, name, birthdate, cellphone, gender, address)
+        values (#{userid}, #{passwd}, #{name}, #{birthdate}, #{cellphone}, #{gender}, #{address})
+    </insert>
 </mapper>
