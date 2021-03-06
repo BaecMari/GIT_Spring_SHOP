@@ -89,7 +89,7 @@
 			<version>4.12</version>
 			<scope>test</scope>
 		</dependency>
-
+<!--<scope>test</scope> -->
 		<!-- lombok -->
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -184,12 +184,35 @@
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
-        <dependency>
+         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <version>4.12</version>
             <scope>compile</scope>
         </dependency>
+
+
+
+
+
+		 <!--
+
+		<dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc8</artifactId>
+			<version>18.3.0.0</version>
+		</dependency>
+
+		  <dependency>
+			<groupId>com.oracle.database.jdbc</groupId>
+			<artifactId>ojdbc6</artifactId>
+			<version>11.2.0.4</version>
+		</dependency>
+		-->
+
+
+
+
     </dependencies>
 
 	<!-- java config 를 위해 pom.xml에 web.xml 없다고 알림 -->
