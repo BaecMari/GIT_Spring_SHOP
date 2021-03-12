@@ -37,12 +37,4 @@ public class MembersController {
 
         service.
     }*/
-
-    @GetMapping("/SampleList")
-    public String list() {
-        //log.info(model);
-        //model.addAttribute("list", service.getList());
-
-        return "/Login_Register/SampleList";
-    }
 }
