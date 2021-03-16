@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+/* 모바일 CSS */
+
+/* PC CSS */
+@media all and (min-width:960px) {
+
+    /* 기본 CSS */
+    #wrap {
+        position: relative;
+        width: 90%;
+    }
+
+    /* 인포메이션 영역 CSS */
+    .info_section {
+        order: 0;
+        position: absolute;
+        top: 30px;
+        top: 1.875rem;
+        right: 30px;
+        right: 1.875rem;
+        z-index: 30;
+        width: auto;
+        border-bottom: 0;
+    }
+
+    .info_list li {
+        width: auto;
+        margin-left: 15px;
+        margin-left: 0.625rem;
+    }
+
+    .infor_list li a {
+        padding: 0;
+    }
+}
